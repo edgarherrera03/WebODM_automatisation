@@ -1,22 +1,23 @@
+###############################################
+###### MODULES UTILISÉS (NE PAS TOUCHER) ######
+###############################################
 from PIL import Image
 import os
 import cv2 as cv
 import numpy as np
 
-
+###############################################
+################# FONCTIONS ###################
+###############################################
 def converter(image_path):
-    # Open the image
     with Image.open(image_path) as img:
-        # Convert the image to RGBA mode (if not already)
         img = img.convert("RGBA")
-
-        # Create a new image with a white background
+        # Creation de l'arrière plan blanc
         background = Image.new("RGBA", img.size, (255, 255, 255))
 
-        # Composite the original image on top of the white background
+        # On superpose l'image sur l'arrière-plan blanc.
         result = Image.alpha_composite(background, img)
 
-        # Convert the image back to RGB mode (if needed)
         result = result.convert("RGB")
         jpeg_path = os.path.splitext(image_path)[0] + '.jpg'
         result.convert("RGB").save(jpeg_path, "JPEG")
@@ -33,10 +34,9 @@ def isPixelEqual(pixel1, pixel2):
 
 
 def crop_and_resize(image_path):
-    # Open the image
     img = cv.imread(image_path)
     height, width = img.shape[:2]
-    #crop the top
+
     found, y_top = False, 0
     for y in range(height):    
         for x in range(width):
@@ -46,7 +46,7 @@ def crop_and_resize(image_path):
         if found:
             y_top = y
             break
-    #crop the bottom
+
     found, y_bottom = False, 0
     for y in range(height-1, -1, -1):    
         for x in range(width):
@@ -56,7 +56,7 @@ def crop_and_resize(image_path):
         if found:
             y_bottom = y
             break
-    #crop the left
+
     found, x_left = False, 0
     for x in range(width):    
         for y in range(height): 
@@ -66,7 +66,7 @@ def crop_and_resize(image_path):
         if found:
             x_left = x
             break
-    #crop the right
+
     found, x_right = False, 0
     for x in range(width-1, -1, -1):    
         for y in range(height): 
@@ -87,7 +87,8 @@ def distance_between_pixels(pixel1, pixel2):
     return distance
 
 def find_points(image):
-    #Find left point
+    #Trouver les 4 coins de l'image à découper
+
     point1= None
     height, width = image.shape[:2]
     for y in range(height):
@@ -96,7 +97,6 @@ def find_points(image):
         else: 
             point1 = (0, y)
             break
-    #Find bottom left point 
     point2 = None
     for x in range(width):
         if isPixelEqual(image[height-1, x], [255, 255, 255]):

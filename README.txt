@@ -1,5 +1,5 @@
 *************************************************************************
-******Script python pour le traitement des images prise par un dron******
+******Script python pour le traitement des images prise par un drone*****
 *************************************************************************
 
 ******************
@@ -7,42 +7,52 @@
 ******************
 
 1.Dirigez-vous vers le dossier Installation/Logiciels et installez les 
-logiciels Docker Desktop, Python et Git.
+logiciels Docker Desktop et Git.
 
-2. Après l'installation de ces trois logiciels, double cliquez sur le 
+2. Ouvrez le logiciel Docker Desktop puis acceptez les conditions d'utilisation.
+Puis, cliquez sur "Continuer sans se connecter" et sautez le questionnaire. Fermez
+la fenêtre une fois le processus d'initialisation terminé.
+
+3. Cherchez sur Microsoft Store Python3.12 et téléchargez-le.
+
+4. Après l'installation de ces trois logiciels, double cliquez sur le 
 fichier installation.bat (celui-ci va installer toutes les extensions
 utilisées dans le script python et va initialiser le logiciel open source 
-Webodm) 
+Webodm). L'installation prend un peu de temps, attendez jusqu'à lire sur le 
+Terminal "Open a web browser and navigate to http://localhost:8000". Ne fermez
+pas la fenêtre.
 
-3. Tapez sur votre navigateur http://localhost:8000. Ceci va vous diriger
+5. Tapez sur votre navigateur http://localhost:8000. Ceci va vous diriger
 vers le login de Webodm. 
 
-4. Créez un compte avec un utilisateur et mot de passe (ces données 
-seront savegardés en local donc les identifiants n'existeront que dans 
+6. Créez un compte avec un utilisateur et mot de passe (ces données 
+seront sauvegardés en local donc les identifiants n'existeront que dans 
 l'ordinateur où le programme est installé)
 
-5. Une fois le compte créé vous pouvez fermer la fenêtre
+7. Une fois le compte créé vous pouvez fermer la fenêtre ainsi que le terminal.
 
-6. Dirigez-vous dans le dossier Scripts_traitements et ouvrez le fichier
-webodm_handler.py sur notes.
+8. Dirigez-vous dans le dossier Scripts_traitements et ouvrez le fichier
+webodm_handler.py sur Bloc de notes.
 
-7. Dans le code cherchez la variable USERNAME et PASSWORD, et modifiez les 
-valeurs avec les identifiants que vous venez de créer.
+9. Dans le code cherchez la variable USERNAME et PASSWORD en haut du script, 
+et modifiez les valeurs avec les identifiants que vous venez de créer.
 
-8. Sauvegardez le fichier puis fermez-le.
+10. Sauvegardez le fichier puis fermez-le.
 
-9. Félicitations, vous avez fini l'installation du logiciel.
+11. Félicitations, vous avez fini l'installation du logiciel.
 
 *******************
 ** Utilisation:  **
 *******************
-1. Collez les images que vous souhaitez traiter dans le dossier Images
+1. Initialisez le logiciel Docker Desktop.
 
-2. Double cliquez sur le fichier lancement_traitement.bat, le traitement
+2. Collez les images que vous souhaitez traiter dans le dossier Images.
+
+3. Double cliquez sur le fichier lancement_traitement.bat, le traitement
 des images va être déclenché. Cette tâche prend environ 5 min, s'ouvre et se 
 ferme toute seule.
 
-3. Quand toutes les fenêtres sont fermées cela veut dire que le traitement 
+4. Quand toutes les fenêtres sont fermées cela veut dire que le traitement 
 a terminé.
 
-4. Vous retrouverez vos résultats dans le dossier Resultats.
+5. Vous retrouverez vos résultats dans le dossier Resultats.

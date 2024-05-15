@@ -1,13 +1,26 @@
+###############################################
+###### MODULES UTILISÉS (NE PAS TOUCHER) ######
+###############################################
+
 import os
 import requests
 import time
 import json
 from image_crop import draw_rectangle
 
-# Define WebODM server URL and credentials
+
+###############################################
+########## IDENTIFIANTS WEBODM ################
+###############################################
+
 WEBODM_URL = 'http://localhost:8000'  
-USERNAME = 'edgar.herrera@etu.emse.fr'             
-PASSWORD = 'Lolliers2024'            
+USERNAME = 'VOTRE_NOM_UTILISATEUR'             
+PASSWORD = 'VOTRE_MOT_DE_PASSE'            
+
+
+###############################################
+################# FONCTIONS ###################
+###############################################
 
 def check_task_status(task_id, project_id, headers):
     url = f"{WEBODM_URL}/api/projects/{project_id}/tasks/{task_id}/"
