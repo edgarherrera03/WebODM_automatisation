@@ -1,12 +1,13 @@
 # WebODM_automatisation
+# Image Stitching
 
-Python script that automates image stitching taken with a drone. The script uses the open source project WebODM at **https://www.opendronemap.org/webodm/** to upload the images to stitch and downloading the results.
+Python script that automates image stitching taken with a drone. The script utilizes the open-source project WebODM, accessible at [WebODM](https://www.opendronemap.org/webodm/), for uploading the images to stitch and downloading the results.
 
-This program is destined for user that do not know how to code, that is why all commands are called by two .bat files that just need to be clicked by users.
+This program is designed for users who are not familiar with coding; hence, all commands are invoked by two .bat files that can be executed by users with a simple click.
 
-The all program is mainly done for windows users, you just need to follow the instructions given in the README.txt. I included the .exe files of the version of Docker Desktop and Git the script was tested. Two files .bat are also included that will be the ones to admnistrate main part of the installation and the use of the programs. 
+The program is primarily developed for Windows users. Simply follow the instructions provided in the README.txt. Included in the package are the .exe files for the versions of Docker Desktop and Git with which the script has been tested. Additionally, two .bat files are provided to manage the main parts of the installation and the usage of the programs.
 
-For Linux and MacOs users, you'll need to install Docker Desktop, Git and Python (the script was tested with version 3.12 but should work with later versions). The .bat files will not work, so you'll need to write the commands by your self. Follow the README.txt and instead of cliquing in the .bat tap these command in your terminal : 
+For Linux and macOS users, Docker Desktop, Git, and Python (tested with version 3.12 but should be compatible with later versions) need to be installed. The .bat files won't function on these systems; therefore, you'll have to input the commands manually. Refer to the README.txt, and instead of clicking on the .bat files, execute these commands in your terminal:
 
 Installation :
 1.  Place you in the main folder (WebODM_automatisation) and tap the next commands:
