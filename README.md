@@ -11,7 +11,7 @@ For Linux and macOS users, Docker Desktop, Git, and Python (tested with version 
 
 Installation :
 1.  Place you in the main folder (WebODM_automatisation) and tap the next commands:
-    ```
+    ```bash
     python3 ./Installation/install_requirements.py
     git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1
      ./WebODM/webodm.sh start
@@ -20,7 +20,7 @@ Installation :
 
 Use : 
 1. Place you in the main folder (WebODM_automatisation) and tap the next commands:
-   ```
+   ```bash
    ./WebODM/webodm.sh start
    python3 Scripts_traitements/webodm_handler.py
    ./WebODM/webodm.sh stop
